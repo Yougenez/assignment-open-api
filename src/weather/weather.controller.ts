@@ -11,5 +11,8 @@ export class WeatherController {
         return this.weatherService.getCurrentWeather(place);
     }
 
-    
+    @Get('forecast/:place')
+    async getTitleDetails(@Param('place') place: string){
+        return this.weatherService.getForecastWeather(place);
+    }
 }
